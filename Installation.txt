@@ -1,0 +1,14 @@
+In powershell :
+
+Create venv:
+python -m venv venv
+
+Activate:
+Set-ExecutionPolicy Unrestricted -Scope Process
+venv\Scripts\activate.ps1
+
+Deactivate:
+deactivate
+
+For permanent Permissions:
+Set-ExecutionPolicy Unrestricted -Force
