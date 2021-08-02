@@ -8,7 +8,7 @@ Face recognition is really a series of several related problems:
 
 
 ## Face Recognition — Step by Step
-  **Step 1: ** Finding all the Faces
+  **Step 1:** Finding all the Faces
     The first step in our pipeline is face detection. 
 -	We need to locate the faces in a photograph before we can try to tell them apart! Face detection is a great feature for cameras. When the camera can automatically pick out faces, it can make sure that all the faces are in focus before it takes the picture. But we’ll use it for a different purpose — finding the areas of the image we want to pass on to the next step in our pipeline.
 -	 We’re going to use a method called Histogram of Oriented Gradients — or just HOG for short.  To find faces in an image, we’ll start by making our image black and white because we don’t need color data to find faces:
@@ -30,3 +30,4 @@ We isolated the faces in our image. But now we have to deal with the problem tha
   This last step is actually the easiest step in the whole process. All we have to do is find the person in our database of known people who has the closest measurements to our test image.
 -	You can do that by using any basic machine learning classification algorithm. No fancy deep learning tricks are needed. We’ll use a simple linear SVM classifier, but lots of classification algorithms could work.
 -	All we need to do is train a classifier that can take in the measurements from a new test image and tells which known person is the closest match. Running this classifier takes milliseconds. The result of the classifier is the name of the person!
+
